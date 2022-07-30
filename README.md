@@ -1,0 +1,1 @@
+# SOC-2022-Stock-Market-Trend-Predictor-Using-Deep-Learning
