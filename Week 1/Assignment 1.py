@@ -1,4 +1,4 @@
-File = open("C:/Users/Ishaanvi/Downloads/SOC-22-main/SOC-22-main/Week-1/HarryPotterAndTheSorcerersStone.txt",'r', encoding="utf8")     #This helps in opening the file which is to be read
+File = open("../HarryPotterAndTheSorcerersStone.txt",'r', encoding="utf8")     #This helps in opening the file which is to be read
 
 
 DictionaryOfWords = {}         #Dictionary mapping every word to a list (of indices of the words' occurences)
