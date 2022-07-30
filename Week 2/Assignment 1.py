@@ -13,7 +13,7 @@ M = 5
 F = 0.0005   # 0.5% Brokerage fee
 
 def GetData(NameOfFile):
-    data = pd.read_csv(f"C:/Users/Ishaanvi/Downloads/SOC-22-main/SOC-22-main/Week-2/{NameOfFile}.csv", usecols=['datadate', 'adjcp', 'tic'])
+    data = pd.read_csv(f"../{NameOfFile}.csv", usecols=['datadate', 'adjcp', 'tic'])
 
     return data  # pd.DataFrame Object
 
