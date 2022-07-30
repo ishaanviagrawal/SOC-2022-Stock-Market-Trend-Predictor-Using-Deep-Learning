@@ -1,7 +1,7 @@
 import pandas as pd
 import mplfinance as mplf
 
-df = pd.read_csv("C:/ISHAANVI/SOC/AAPL.csv")
+df = pd.read_csv("../AAPL.csv")
 df.Date = pd.to_datetime(df.Date)
 del df['Adj Close']
 
@@ -20,11 +20,11 @@ def plot_chart(period, train):
 
         if (df['Close'][i] - df['Close'][i + period - 1]) <= 0:
             mplf.plot(buffer_df, figratio = (50, 50), type = 'candle', volume = False, 
-            style = 'yahoo', savefig = f'C:/ISHAANVI/SOC/train/sell/chart-{period}days-{int(i/period)}.png')
+            style = 'yahoo', savefig = f'../train/sell/chart-{period}days-{int(i/period)}.png')
         
         else:
             mplf.plot(buffer_df, figratio = (50, 50), type = 'candle', volume = False, 
-            style = 'yahoo', savefig = f'C:/ISHAANVI/SOC/train/buy/chart-{period}days-{int(i/period)}.png')
+            style = 'yahoo', savefig = f'../train/buy/chart-{period}days-{int(i/period)}.png')
 
         i = i + period
 
@@ -34,11 +34,11 @@ def plot_chart(period, train):
 
         if (df['Close'][i] - df['Close'][i + period - 1]) <= 0:
             mplf.plot(buffer_df, figratio = (50, 50), type = 'candle', volume = False, 
-            style = 'yahoo', savefig = f'C:/ISHAANVI/SOC/test/sell/chart-{period}days-{int((i-1000)/period)}.png')
+            style = 'yahoo', savefig = f'../test/sell/chart-{period}days-{int((i-1000)/period)}.png')
 
         else:
             mplf.plot(buffer_df, figratio = (50, 50), type = 'candle', volume = False, 
-            style = 'yahoo', savefig = f'C:/ISHAANVI/SOC/test/buy/chart-{period}days-{int((i-1000)/period)}.png')
+            style = 'yahoo', savefig = f'../test/buy/chart-{period}days-{int((i-1000)/period)}.png')
 
         i = i + period
 
