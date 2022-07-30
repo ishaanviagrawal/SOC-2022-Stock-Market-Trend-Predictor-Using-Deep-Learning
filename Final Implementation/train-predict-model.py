@@ -72,13 +72,13 @@ train_datagen = preprocessing.image.ImageDataGenerator(
 test_datagen = preprocessing.image.ImageDataGenerator(rescale=1./255)
 
 train_generator = train_datagen.flow_from_directory(
-        'C:/ISHAANVI/SOC/train',
+        '../train',
         target_size=(50, 50),
         batch_size=8,
         class_mode='binary')
 
 validation_generator = test_datagen.flow_from_directory(
-        'C:/ISHAANVI/SOC/test',
+        '../test',
         target_size=(50, 50),
         batch_size=8,
         class_mode='binary')
@@ -87,7 +87,7 @@ validation_generator = test_datagen.flow_from_directory(
 monitor = 'val_conditional_average_metric'
 
 checkpoint = ModelCheckpoint(
-  "C:/ISHAANVI/SOC/models", 
+  "../models", 
   monitor=monitor, 
   verbose=1, 
   save_best_only=True, 
@@ -104,7 +104,7 @@ model.fit(
     )
 
 model = keras.models.load_model(
-  "C:/ISHAANVI/SOC/models", 
+  "../models", 
   custom_objects = {
     'conditional_average_metric': conditional_average_metric, 
     'specificity': specificity, 
@@ -140,4 +140,4 @@ def predict(file):
   return answer
 
 
-predict("C:/ISHAANVI/SOC/test/sell/chart-20days-7.png")
+predict("../test/predict/chart1.png")
