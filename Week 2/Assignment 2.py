@@ -14,7 +14,7 @@ F = 0.0005
 
 
 def GetData(NameOfFile):
-    data = pd.read_csv(f"C:/Users/Ishaanvi/Downloads/SOC-22-main/SOC-22-main/Week-2/{NameOfFile}.csv", usecols=['datadate', 'tic', 'adjcp'])
+    data = pd.read_csv(f"../{NameOfFile}.csv", usecols=['datadate', 'tic', 'adjcp'])
 
     return data  # pd.DataFrame Object
 
@@ -116,14 +116,6 @@ class PortFolio:
         # newPriceVector : Numpy array containing the prices of all the stocks for the current day
         self.stock_prices = newPriceVector
 
-
-    def ChangePairs(self, PartitionedDataFrame, today, Tday):  
-        # Calls the Switch function for all the pairs of stocks owned
-        pass
-
-
-
-
     
     def RebalancePortfolio(self):
         # Calculates the Co-relation Matrix and changes the list of pairs, which you'll be using to trade
@@ -170,10 +162,6 @@ class PortFolio:
         for i in range(0, len(self.negatively_correlated_stocks)):
             index = Switch(self.negatively_correlated_stocks[i][0], self.negatively_correlated_stocks[i][0], today - 2, PartitionedData)
             self.BuyStock(index, 10)
-
-
-
-
 
 
 myPortfolio = PortFolio()
