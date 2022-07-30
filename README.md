@@ -10,4 +10,9 @@ This week was spent learning about various basic to advanced python libraries.
 Momentum-based Trading is based on the assumption that Stocks which have performed will in the past, will perform better in the coming future. This program would read the Data from a CSV File, have some class and functions which will help it decide what to buy based on Momentum.  
 ### Assignment-2
 The idea behind pair switching is that if the assets are negatively correlated, then a traditional mixed portfolio might lead to a lower return than the return for the individual assets. We periodically compute the Co-relation Coefficients' Matrix and choose pair of stocks which have the most negative co-relations and trade in them. The basic idea being that if one of them would fall, then the other would rise and hence, we must switch between them. The program would need to first read the Data from DATA.csv, and have some functions which could decide which pairs to choose.  
-
+## Week-3
+This week was spent learning about the concepts of Machine Learning and Deep learning
+## Week-4
+This week was spent reading and understanding the reasearch paper.
+## Final-Implementation
+This consists of implementing the research paper's method to predict stock market trends. First, we collected the data from stock market data. After that, we applied the sliding window technique to generate the period data before using computer graphic technique to generate the candlestick chart images. Finally, our candlestick charts are feed as input into some deep learning neural networks model to find the best model for stock market prediction, and the outputs will be binary class to indicate the stock price will going up or down in the near future.
